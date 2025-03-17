@@ -1,0 +1,442 @@
+/* =================================================================
+ * Boilerplate
+ * ================================================================= */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* =================================================================
+ * Home / Index page section Styles
+ * ================================================================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    background-color: rgb(0, 0, 40);
+    color: white;
+    display: flex;
+    padding: 10px 20px;
+}
+
+header h1 {
+    cursor: pointer;
+    font-size: 2rem;
+    width: 50%;
+}
+
+nav {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 12px;
+}
+
+nav a {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    padding: 8px 13px;
+    transition: color 0.25s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.introduction {
+    width: 100%;
+    height: 35rem;
+    background-image: url('https://irp-cdn.multiscreensite.com/b1199c82/dms3rep/multi/iStock-179365113.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px 7vw;
+    position: relative;
+}
+
+.introduction::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+#animationContainer {
+    position: relative;
+    height: 4.3vh;
+    /* Adjust based on your needs */
+    z-index: 1;
+}
+
+#animationContainer h1 {
+    position: absolute;
+    font-family: monospace;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    white-space: nowrap;
+    opacity: 1;
+    text-align: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.introdution-container2 p {
+    position: relative;
+    z-index: 2;
+    /* Keeps text above the gradient */
+    color: white;
+    width: 70%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aboutus {
+    padding: 12px 10vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 40);
+    color: white;
+}
+
+.aboutus-container {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
+.aboutus-subcontainer1 {
+    padding: 12px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    line-height: 25px;
+    justify-content: center;
+}
+
+.aboutus-subcontainer1 h1 {
+    margin-bottom: 4vh;
+}
+
+.button {
+    width: fit-content;
+    margin: 3vh 1vw;
+    background: linear-gradient(135deg, #7b4397, #dc2430);
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #7b4397, #dc2430);
+    /* Slight gradient shift */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Softer white glow */
+    transform: scale(1.03);
+    /* Slight zoom-in */
+}
+
+.button:active {
+    transform: scale(0.97);
+    /* Click effect */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    /* Even softer glow when clicked */
+}
+
+.aboutus-subcontainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.aboutus-subcontainer2 img {
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.service {
+    padding: 12px 7vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: 11px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 20vw;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
+.slide_content {
+    width: 100%;
+    height: 21vw;
+    display: flex;
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.slide_content img {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255);
+    margin: 5px 0 5px 0;
+}
+
+.whyus {
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    background-color: rgb(0, 0, 40);
+    padding: 2rem 7vw;
+}
+
+.whyus-container1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whyus-container1 img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.whyus-container2 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.whyus-container2 p {
+    width: 90%;
+    color: white;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.project h1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 4vw;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0 0 2vw;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    display: flex;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.project-slider {
+    margin: 25px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+.project-slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.project-slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) - 10s) !important;
+}
+
+.project-slider .list .item img {
+    width: 100%;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.project-slider:hover .item {
+    animation-play-state: paused !important;
+    filter: grayscale(1);
+}
+
+.project-slider .item:hover {
+    filter: grayscale(0);
+}
+
+.project-slider[reverse="true"] .item {
+    animation: reversePlay 10s linear infinite;
+}
+
+@keyframes reversePlay {
+    from {
+        left: calc(var(--width) * -1);
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+footer {
+    background-color: rgb(0, 0, 40);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+footer a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* =================================================================
+ * About US page section Styles
+ * ================================================================= */
+
+.aboutus-entry {
+    width: 100%;
+    height: 30rem;
+    background-image: url('https://cdn-images-1.medium.com/max/2000/1*1x8Njt9B8ldzeZ7BTaOdOQ.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px 7vw;
+    position: relative;
+}
+
+.aboutus-entry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 40, 0.7), rgba(0, 0, 40, 0.3), transparent);
+    z-index: 1;
+    /* Ensures gradient is on top of the background image */
+}
+
+.aboutus-entry h1 {
+    margin: 0;
+    color: white;
+    font-size: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: black 3px 2px 3px;
+    display: flex;
+    margin-bottom: 13vh;
+    z-index: 2;
+}
+
+.aboutus-entry p {
+    margin: 0;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
